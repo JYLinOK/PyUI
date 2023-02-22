@@ -13,7 +13,7 @@ allconfig = config.config
 
 
 # class of Main interface
-class PyDraw(Tk):
+class PyUI(Tk):
     # Main interface Define
     def __init__(self):
         super().__init__()
@@ -28,8 +28,8 @@ class PyDraw(Tk):
         self.geometry(size)
 
         self.state('zoomed')
-        self.title('PyDraw')
-        self.BiaoTi_Text = 'PyDraw'
+        self.title('PyUI')
+        self.BiaoTi_Text = 'PyUI'
         self.BiaoTi_Text_YanSe = 'black'
         self.ChuangKou_JiXia_YanSe = 'black'
         self.ChuangKou_BianTiLan_YanSe = 'white'
@@ -5730,7 +5730,7 @@ class SetCK_D(Toplevel):
 
         line_next = "\n"
 
-        Str_Import = "# Use the PyDraw to Design UI"\
+        Str_Import = "# Use the PyUI to Design UI"\
         + """
 # © JY.Lin 
 from tkinter import *
@@ -5743,8 +5743,8 @@ import tkinter as tk  # (when you want to use the short-call)
 """ \
 
         if self.Ent_ck_name.get() == '':
-            allconfig['ck_name'] = "PyDraw"
-        # self.title('PyDraw')
+            allconfig['ck_name'] = "PyUI"
+        # self.title('PyUI')
         Str_Main_CK = "class " + str(allconfig['ck_name']) + "(Tk):" + line_next \
                       + allconfig['tap'] + "def __init__(self): " + line_next \
                       + allconfig['tap'] + allconfig['tap'] + "super().__init__() " + line_next\
@@ -6209,7 +6209,7 @@ class Menu_Str:
 
 
 if __name__ == '__main__':
-    PypA = PyDraw()
+    PypA = PyUI()
     PypA.HuaBu_YiDong()
 
     PypA.mainloop()
